@@ -25,7 +25,7 @@ It does: both land in the **top 4% of 3,176 B-chromosome genes**.
 | **Product of the two axes** | **top 3.6%** | **top 1.3%** |
 
 Neither axis alone recovers both genes. `SYN2-B` is strong on function and weak
-on expression; `CENH3-B` is the reverse. Their product recovers both — which is
+on expression; `CENH3-B` is the reverse. Their product recovers both - which is
 the same logic the original manual analysis used (GO relevance ∩ elimination-specific
 expression), reproduced structurally rather than by hand-tuned filtering.
 
@@ -36,7 +36,7 @@ expression), reproduced structurally rather than by hand-tuned filtering.
 ## Biological system
 
 *Aegilops speltoides* is a wild relative within the wheat gene pool. It carries
-**B chromosomes** — supernumerary chromosomes that are programmed to be eliminated
+**B chromosomes** - supernumerary chromosomes that are programmed to be eliminated
 from root tissue during development while being retained in shoots and driven
 through the male germline.
 
@@ -70,7 +70,7 @@ and two fold-local features described below.
 **Leak-free fold-local features.** Guilt-by-association (mean co-expression with the
 positive seed set) and guilt-by-homology (best DIAMOND bitscore to a positive) are
 both *label-derived*. They are recomputed inside every CV fold using only that fold's
-training positives. Computing them once on the full label set — the common shortcut —
+training positives. Computing them once on the full label set -the common shortcut-
 leaks the answer.
 
 **Model.** `HistGradientBoostingClassifier`, class-balanced, scored by PR-AUC
@@ -110,8 +110,8 @@ So the pipeline ships two modes rather than one number:
 
 | Mode | Features | PR-AUC | vs random |
 |---|---|---|---|
-| **Retrieval** — find relatives of known genes | all, incl. homology | 0.398 ± 0.129 | 11.8× |
-| **Discovery** — find novel families | homology excluded | 0.168 ± 0.047 | 5.0× |
+| **Retrieval** - find relatives of known genes | all, incl. homology | 0.398 ± 0.129 | 11.8× |
+| **Discovery** - find novel families | homology excluded | 0.168 ± 0.047 | 5.0× |
 
 ---
 
@@ -126,8 +126,8 @@ never used in training or labelling. They are enriched **3.2×** in the top 200 
 the combined ranking.
 
 **Top-of-list coherence.** The 20 highest-ranked genes are dominated by chromosome
-segregation machinery — kinesins, two kinetochore NUF2 paralogs, condensin subunit 2,
-an SMC family protein, MUS81, Shugoshin-1, synaptonemal complex protein 1 — despite
+segregation machinery -kinesins, two kinetochore NUF2 paralogs, condensin subunit 2,
+an SMC family protein, MUS81, Shugoshin-1, synaptonemal complex protein 1 -despite
 the model never seeing a GO term as a feature. Full list in
 [`results/top50_candidates.csv`](results/top50_candidates.csv).
 
