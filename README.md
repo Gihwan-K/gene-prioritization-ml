@@ -3,8 +3,8 @@
 **Can a machine-learning ranker independently rediscover the genes I found by manual curation during my PhD?**
 
 This repository re-approaches a published candidate-gene discovery problem as a
-learning-to-rank task. Two genes — `SYN2-B` (a cohesin α-kleisin) and `CENH3-B`
-(a centromeric histone variant) — were nominated by stepwise manual filtering of
+learning-to-rank task. Two genes; `SYN2-B` (a cohesin α-kleisin) and `CENH3-B`
+(a centromeric histone variant) were nominated by stepwise manual filtering of
 multi-omics data and then validated experimentally. Here they are **removed from
 training entirely** and the question is whether an unbiased model puts them back
 on top.
