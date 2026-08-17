@@ -10,12 +10,12 @@ retained in shoots. Which of the 3,176 genes encoded on the B chromosome drive i
 stepwise filtering of multi-omics data nominated `SYN2-B` (a cohesin α-kleisin)
 and `CENH3-B` (a centromeric histone variant), both then validated experimentally.
 This repository asks whether a **learned ranker reaches the same two genes without
-being told the answer** — they are removed from training entirely, and every gene
+being told the answer** - they are removed from training entirely, and every gene
 on the B chromosome is scored from scratch.
 
 It does: both land in the **top 4% of 3,176 B-chromosome genes**.
 
-Ranking combines two axes — a supervised **functional score** (how
+Ranking combines two axes - a supervised **functional score** (how
 chromosome-segregation-like is this gene?) and an unsupervised
 **elimination-expression score** (is it expressed where and when elimination
 happens?). Neither alone recovers both candidates; their product does.
@@ -28,13 +28,13 @@ happens?). Neither alone recovers both candidates; their product does.
 
 | Scoring scheme | SYN2-B | CENH3-B |
 |---|---|---|
-| Functional model — retrieval mode | top 16.3% | top 8.3% |
-| Functional model — discovery mode | top 7.9% | top 11.4% |
+| Functional model - retrieval mode | top 16.3% | top 8.3% |
+| Functional model - discovery mode | top 7.9% | top 11.4% |
 | Elimination-associated expression | top 17.1% | top 2.4% |
 | **Product of the two axes** | **top 3.6%** | **top 1.3%** |
 
 Neither axis alone recovers both genes. `SYN2-B` is strong on function and weak
-on expression; `CENH3-B` is the reverse. Their product recovers both — which is
+on expression; `CENH3-B` is the reverse. Their product recovers both - which is
 the same logic the original manual analysis used (GO relevance ∩ elimination-specific
 expression), reproduced structurally rather than by hand-tuned filtering.
 
