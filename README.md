@@ -1,15 +1,24 @@
-# ML-based candidate gene prioritization on a B chromosome
 
-**Can a machine-learning ranker independently rediscover the genes I found by manual curation during my PhD?**
+### *Aegilops speltoides*, a wild relative within the wheat gene pool
+# Machine-learning prioritization of candidate genes for programmed B chromosome elimination
 
-This repository re-approaches a published candidate-gene discovery problem as a
-learning-to-rank task. Two genes; `SYN2-B` (a cohesin α-kleisin) and `CENH3-B`
-(a centromeric histone variant) were nominated by stepwise manual filtering of
-multi-omics data and then validated experimentally. Here they are **removed from
-training entirely** and the question is whether an unbiased model puts them back
-on top.
+**The biological question.** *Ae. speltoides* carries B chromosomes that are
+**programmed to be eliminated from root tissue** during development, while being
+retained in shoots. Which of the 3,176 genes encoded on the B chromosome drive its own elimination?
+
+**The computational question.** That question was answered once already, by hand:
+stepwise filtering of multi-omics data nominated `SYN2-B` (a cohesin α-kleisin)
+and `CENH3-B` (a centromeric histone variant), both then validated experimentally.
+This repository asks whether a **learned ranker reaches the same two genes without
+being told the answer** — they are removed from training entirely, and every gene
+on the B chromosome is scored from scratch.
 
 It does: both land in the **top 4% of 3,176 B-chromosome genes**.
+
+Ranking combines two axes — a supervised **functional score** (how
+chromosome-segregation-like is this gene?) and an unsupervised
+**elimination-expression score** (is it expressed where and when elimination
+happens?). Neither alone recovers both candidates; their product does.
 
 ---
 
@@ -25,7 +34,7 @@ It does: both land in the **top 4% of 3,176 B-chromosome genes**.
 | **Product of the two axes** | **top 3.6%** | **top 1.3%** |
 
 Neither axis alone recovers both genes. `SYN2-B` is strong on function and weak
-on expression; `CENH3-B` is the reverse. Their product recovers both - which is
+on expression; `CENH3-B` is the reverse. Their product recovers both — which is
 the same logic the original manual analysis used (GO relevance ∩ elimination-specific
 expression), reproduced structurally rather than by hand-tuned filtering.
 
@@ -33,16 +42,14 @@ expression), reproduced structurally rather than by hand-tuned filtering.
 
 ---
 
-## Biological system
+## The data
 
-*Aegilops speltoides* is a wild relative within the wheat gene pool. It carries
-**B chromosomes** - supernumerary chromosomes that are programmed to be eliminated
-from root tissue during development while being retained in shoots and driven
-through the male germline.
-
-The dataset: 42 RNA-seq libraries, 7 tissues, plants with (+B) and without (0B)
-B chromosomes, against a chromosome-scale PacBio HiFi assembly in which 3,176
-genes are B-encoded.
+42 RNA-seq libraries across 7 tissues, from plants with (+B) and without (0B) B
+chromosomes, mapped to a chromosome-scale PacBio HiFi assembly in which 3,176
+genes are B-encoded. The tissues span the three states that matter biologically:
+**elimination-active** (embryos, adventitious roots, laser-captured proto-root),
+**elimination-negative** (leaf; primary root, where Bs are already gone), and
+**nondisjunction/drive** (anthers at first pollen mitosis).
 
 **The data reproduces the biology unprompted.** Counting how many B genes survive
 an expression filter in each tissue recovers the elimination phenotype with no
@@ -70,7 +77,7 @@ and two fold-local features described below.
 **Leak-free fold-local features.** Guilt-by-association (mean co-expression with the
 positive seed set) and guilt-by-homology (best DIAMOND bitscore to a positive) are
 both *label-derived*. They are recomputed inside every CV fold using only that fold's
-training positives. Computing them once on the full label set -the common shortcut-
+training positives. Computing them once on the full label set — the common shortcut —
 leaks the answer.
 
 **Model.** `HistGradientBoostingClassifier`, class-balanced, scored by PR-AUC
@@ -110,8 +117,8 @@ So the pipeline ships two modes rather than one number:
 
 | Mode | Features | PR-AUC | vs random |
 |---|---|---|---|
-| **Retrieval** - find relatives of known genes | all, incl. homology | 0.398 ± 0.129 | 11.8× |
-| **Discovery** - find novel families | homology excluded | 0.168 ± 0.047 | 5.0× |
+| **Retrieval** — find relatives of known genes | all, incl. homology | 0.398 ± 0.129 | 11.8× |
+| **Discovery** — find novel families | homology excluded | 0.168 ± 0.047 | 5.0× |
 
 ---
 
@@ -126,8 +133,8 @@ never used in training or labelling. They are enriched **3.2×** in the top 200 
 the combined ranking.
 
 **Top-of-list coherence.** The 20 highest-ranked genes are dominated by chromosome
-segregation machinery -kinesins, two kinetochore NUF2 paralogs, condensin subunit 2,
-an SMC family protein, MUS81, Shugoshin-1, synaptonemal complex protein 1 -despite
+segregation machinery — kinesins, two kinetochore NUF2 paralogs, condensin subunit 2,
+an SMC family protein, MUS81, Shugoshin-1, synaptonemal complex protein 1 — despite
 the model never seeing a GO term as a feature. Full list in
 [`results/top50_candidates.csv`](results/top50_candidates.csv).
 
