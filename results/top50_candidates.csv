@@ -1,0 +1,51 @@
+,rank,combined,func_grp_pct,elim_score,annotation,is_validated,in_T6_final,in_T10_sorghum
+Aesp_chrB_ipkv1.63613,1,0.8333332507185504,0.9996851385390428,0.833595717884131,Kinesin-like protein,False,False,False
+Aesp_chrB_ipkv1.64384,2,0.8325358561376572,0.9993702770780856,0.8330604534005038,Kinesin-like protein,False,False,False
+Aesp_chrB_ipkv1.65280,3,0.8173779138564421,0.993073047858942,0.8230793450881612,"Kinetochore protein nuf2, putative",False,False,False
+Aesp_chrB_ipkv1.64959,4,0.8069012952940505,0.9886649874055417,0.8161523929471034,"Kinetochore protein nuf2, putative",False,False,False
+Aesp_chrB_ipkv1.60392,5,0.8040464357206759,0.9864609571788412,0.8150818639798489,L-Ala-D/L-Glu epimerase,False,False,False
+Aesp_chrB_ipkv1.63524,6,0.8022943248799245,0.9987405541561712,0.8033060453400505,Kinesin-like protein,False,False,False
+Aesp_chrB_ipkv1.63762,7,0.7962309516747141,0.983942065491184,0.8092254408060454,Structural maintenance of chromosomes family protein,False,False,False
+Aesp_chrB_ipkv1.63789,8,0.7923294255880058,0.9883501259445844,0.8016687657430731,Crossover junction endonuclease mus81,False,False,False
+Aesp_chrB_ipkv1.63377,9,0.7833307623612866,0.9386020151133502,0.8345717884130983,Inositol polyphosphate 5-phosphatase OCRL-1,False,False,False
+Aesp_chrB_ipkv1.64970,10,0.7780431518821894,0.9889798488664988,0.7867128463476071,Condensin complex subunit 2,False,False,False
+Aesp_chrB_ipkv1.64664,11,0.7769516850243324,0.9817380352644836,0.791404282115869,demeter-like 2,False,False,False
+Aesp_chrB_ipkv1.60871,12,0.7740616612947231,0.9515113350125944,0.813507556675063,Bifunctional inhibitor/lipid-transfer protein/seed storage 2S albumin superfamily protein,False,False,False
+Aesp_chrB_ipkv1.64269,13,0.7710052943518454,0.9480478589420654,0.8132556675062973,Kinesin-like protein,False,False,False
+Aesp_chrB_ipkv1.61173,14,0.7700067889524075,0.9552896725440806,0.8060453400503778,Kinesin-like protein,False,False,False
+Aesp_chrB_ipkv1.61134,15,0.7652128348476291,0.9870906801007556,0.7752204030226699,"Retrotransposon protein, putative, unclassified, expressed",False,False,False
+Aesp_chrB_ipkv1.60987,16,0.7607779378081201,0.9609571788413098,0.7916876574307304,Ubiquitin carboxyl-terminal hydrolase,False,False,False
+Aesp_chrB_ipkv1.63739,17,0.7542272827852471,0.9908690176322418,0.7611775818639799,Shugoshin-1,False,False,False
+Aesp_chrB_ipkv1.65841,18,0.7527488416746506,0.998425692695214,0.7539357682619648,Synaptonemal complex protein 1,False,False,False
+Aesp_chrB_ipkv1.62735,19,0.7507860631372575,0.9792191435768262,0.7667191435768264,bZIP transcription factor family protein,False,False,False
+Aesp_chrB_ipkv1.63530,20,0.750012065062909,0.9977959697732998,0.7516687657430732,Kinesin-like protein,False,False,False
+Aesp_chrB_ipkv1.63114,21,0.7479185040194406,0.9933879093198992,0.7528967254408061,L-Ala-D/L-Glu epimerase,False,False,False
+Aesp_chrB_ipkv1.64137,22,0.7447328118952599,0.994647355163728,0.7487405541561714,Shugoshin-1,False,False,False
+Aesp_chrB_ipkv1.63126,23,0.741282818557316,0.9256926952141058,0.8007871536523931,ENTH/ANTH/VHS superfamily protein,False,False,False
+Aesp_chrB_ipkv1.63286,24,0.7393886135944014,0.8664987405541562,0.8533060453400505,"Sarcoplasmic reticulum histidine-rich calcium-binding protein, putative, expressed",False,False,False
+Aesp_chrB_ipkv1.63327,25,0.7354013531904904,0.8561083123425692,0.8590050377833753,Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit 1,False,False,False
+Aesp_chrB_ipkv1.64990,26,0.7349437532120628,0.9848866498740554,0.746221662468514,Crossover junction endonuclease mus81,False,False,False
+Aesp_chrB_ipkv1.61795,27,0.7326548908215901,0.9511964735516372,0.7702455919395466,Kinesin-like protein,False,False,False
+Aesp_chrB_ipkv1.61136,28,0.7316543630122645,0.9949622166246852,0.7353589420654912,Kinetochore protein NDC80,False,False,False
+Aesp_chrB_ipkv1.63157,29,0.7260346212779727,0.9389168765743072,0.7732682619647355,Katanin p60 ATPase-containing subunit A1,False,False,False
+Aesp_chrB_ipkv1.61493,30,0.7255820773242645,0.9020780856423174,0.8043450881612091,p-loop containing nucleoside triphosphate hydrolases superfamily protein,False,False,False
+Aesp_chrB_ipkv1.62902,31,0.7247356393035931,0.8831863979848866,0.8205919395465996,RNA-binding protein Nova,False,False,False
+Aesp_chrB_ipkv1.60708,32,0.7243780891319659,0.9990554156171284,0.7250629722921915,Structural maintenance of chromosomes protein,False,False,False
+Aesp_chrB_ipkv1.65100,33,0.7230261477770941,0.8838161209068011,0.8180730478589422,Histone-lysine N-methyltransferase,False,False,False
+Aesp_chrB_ipkv1.64397,34,0.7211964220000128,0.92411838790932,0.7804156171284636,Chromodomain-helicase-DNA-binding family protein,False,False,False
+Aesp_chrB_ipkv1.61545,35,0.7207035488138367,0.9833123425692696,0.7329345088161209,Structural maintenance of chromosomes protein,False,False,False
+Aesp_chrB_ipkv1.63164,36,0.7199518269895755,0.9943324937027708,0.7240554156171285,Structural maintenance of chromosomes family protein,False,False,False
+Aesp_chrB_ipkv1.62824,37,0.713540946265759,0.9200251889168766,0.775566750629723,"Transposon protein, putative, CACTA, En/Spm sub-class",False,False,False
+Aesp_chrB_ipkv1.63458,38,0.7089377629132855,0.9238035264483628,0.7674118387909321,CCR4-NOT transcription complex subunit 3,False,False,False
+Aesp_chrB_ipkv1.60570,39,0.7082475461426697,0.9704030226700252,0.7298488664987407,UTP--glucose-1-phosphate uridylyltransferase,False,False,False
+Aesp_chrB_ipkv1.64043,40,0.7052956108946824,0.8542191435768262,0.8256612090680101,50S ribosomal protein L18,False,False,False
+Aesp_chrB_ipkv1.61081,41,0.704265312022156,0.8661838790931989,0.8130667506297229,not annotated,False,False,False
+Aesp_chrB_ipkv1.60003,42,0.7036328330710812,0.980793450881612,0.7174118387909322,Cell cycle regulated microtubule associated protein,False,False,False
+Aesp_chrB_ipkv1.61129,43,0.7034744605320763,0.996536523929471,0.705919395465995,Kinetochore protein NDC80,False,False,False
+Aesp_chrB_ipkv1.62274,44,0.7032172179253724,0.8526448362720404,0.8247481108312343,pre-mRNA-processing protein 40B,False,False,False
+Aesp_chrB_ipkv1.64229,45,0.7027119326941991,0.9458438287153652,0.7429471032745594,Kinesin-like protein,False,False,False
+Aesp_chrB_ipkv1.62151,46,0.702525335640731,0.927896725440806,0.7571158690176322,RNA-binding protein Nova,False,False,False
+Aesp_chrB_ipkv1.63487,47,0.7024855615796053,0.825566750629723,0.8509130982367759,Zinc finger CCCH domain protein,False,False,False
+Aesp_chrB_ipkv1.61164,48,0.7018182257992882,0.9937027707808564,0.7062657430730479,"Kinetochore protein nuf2, putative",False,False,True
+Aesp_chrB_ipkv1.64219,49,0.7011847356432691,0.9521410579345088,0.7364294710327456,Deoxyuridine 5'-triphosphate nucleotidohydrolase,False,False,False
+Aesp_chrB_ipkv1.61008,50,0.7010794117087222,0.8513853904282116,0.8234571788413099,SNF2 domain-containing protein / helicase domain-containing protein / zinc finger protein-like protein,False,False,False
