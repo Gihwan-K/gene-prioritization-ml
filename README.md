@@ -199,4 +199,4 @@ expected layout under `data/`.
 
 Kim G. *et al.* Programmed chromosome elimination correlates with the overexpression
 of cohesin and additional B chromosome-encoded genes in *Aegilops speltoides*.
-(under revision; bioRxiv preprint).
+(Under revision; bioRxiv preprint).
